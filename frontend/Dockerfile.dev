@@ -1,0 +1,22 @@
+FROM node
+
+WORKDIR /usr/frontend
+
+COPY package.json .
+
+RUN npm config set unsafe-perm true
+RUN npm install
+RUN chown -R node /usr/frontend/node_modules
+USER node
+
+
+COPY . .
+
+EXPOSE 3000
+
+
+
+CMD ["npm", "start"]
+
+
+# * override CMD with: docker exec -it frontend-app npm run test
