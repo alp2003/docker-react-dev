@@ -18,7 +18,7 @@ function App() {
                 </a>
 
                 <p className="App-Intro">
-                    I was changed on the Feature branch XY
+                    I was changed on the Feature branch XYZ
                 </p>
             </header>
         </div>
