@@ -16,6 +16,8 @@ function App() {
                 >
                     Learn React
                 </a>
+
+                <p className="App-Intro">I was changed on the Feature branch</p>
             </header>
         </div>
     );
