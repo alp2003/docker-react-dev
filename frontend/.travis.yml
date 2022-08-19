@@ -4,3 +4,6 @@ services:
 
 before_install:
     - docker build -f Dockerfile.dev -t alp2003/docker-frontend-dev .
+
+script:
+    - docker run alp2003/docker-frontend-dev npm run test -- --coverage
