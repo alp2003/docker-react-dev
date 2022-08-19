@@ -1,23 +1,8 @@
-version: '3.8'
+version: '3'
 services:
-    frontend:
-        container_name: frontend-app
+    web:
         build:
-            context: ./frontend
-            dockerfile: ./Dockerfile.dev
+            context: .
+            dockerfile: Dockerfile
         ports:
-            - 3000:3000
-        volumes:
-            - ./frontend:/usr/frontend
-            - /usr/frontend/node_modules
-    tests:
-        container_name: frontend-test
-        build:
-            context: ./frontend
-            dockerfile: ./Dockerfile.dev
-        volumes:
-            - ./frontend:/usr/frontend
-            - /usr/frontend/node_modules 
-        command: ['npm', 'run', 'test']
-        stdin_open: true
-        tty: true
+            - '80:80'
